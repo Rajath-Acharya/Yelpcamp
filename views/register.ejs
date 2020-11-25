@@ -1,16 +1,23 @@
 <%- include("./partials/header") %>
 
+<div class="main-div">	<div class="box">
 <h1>
-	SignUp
+SignUp
 </h1>
 
 <form action="/register" method="POST">
-	<input type="text" name="username" placeholder="username">
-	<input type="password" name="password" placeholder="password">
+	<div class="input-box">
+		<input type="text" name="username" placeholder="username" required>
+	</div>
+	<div class="input-box">
+			<input type="password" name="password" placeholder="password" required>
+	</div>
     <button>
 		Sign Up
 	</button>
 	
 </form>
+			</div>
+</div>
 
 <%- include("./partials/footer") %>
