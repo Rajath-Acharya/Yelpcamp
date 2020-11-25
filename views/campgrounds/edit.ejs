@@ -1,34 +1,48 @@
-
 <%- include("../partials/header") %>
 
 <div class="main-div">
-<div class="box">
-		<h1 style="text-align: center;">
-			Edit <%= campground.name %>
-		</h1>
+  <div class="box">
+    <h1 style="text-align: center">Edit <%= campground.name %></h1>
 
-			<form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
-					<div class="input-box">
-					<input class="form-control" type="text" name="campground[name]" value="<%= campground.name %>">
-				</div>
-					<div class="input-box">
-					<input type="number" name="campground[price]" value="<%= campground.price%>" min="0.1" step="0.1" />
-				</div>
-				<div class="input-box">
-					<input class="form-control" type="text" name="campground[image]" value="<%= campground.image %>">
-				</div>
-					<div class="input-box">
-					<input
-						type="text"
-						name="campground[description]"
-						value="<%= campground.description %>"
-					/>
-				</div>
-					<button class="sub-hov">Submit</button>
-			<a class="a-edit" href="/campgrounds">Home Page</a>
-			</form>
-			
-		</div>
-	</div>
+    <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+      <div class="input-box">
+        <input
+          class="form-control"
+          type="text"
+          name="campground[name]"
+          value="<%= campground.name %>"
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="number"
+          name="campground[price]"
+          value="<%= campground.price%>"
+          min="0.1"
+          step="0.1"
+        />
+      </div>
+      <div class="input-box">
+        <input
+          class="form-control"
+          type="text"
+          name="campground[image]"
+          value="<%= campground.image %>"
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="text"
+          name="campground[description]"
+          value="<%= campground.description %>"
+        />
+      </div>
+      <button class="sub-hov">Submit</button>
+      <a class="a-edit" href="/campgrounds">Home Page</a>
+    </form>
+  </div>
+</div>
 
 <%- include("../partials/footer") %>
+
+<h1>hiiiiiiiiiiiiiiiiii</h1>
